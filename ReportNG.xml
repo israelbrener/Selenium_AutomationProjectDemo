@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite ReportNG">
+	<parameter name="browserName" value="chrome" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+
+	<test thread-count="5" name="Test Sanity ReportNG">
+		<classes>
+			<class name="tests.TestPageObject" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
